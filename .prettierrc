@@ -4,5 +4,6 @@
     "tabWidth": 4,
     "useTabs": false,
     "jsxSingleQuote": false,
-    "endOfLine": "crlf"
+    "endOfLine": "crlf",
+    "printWidth": 120
 }
