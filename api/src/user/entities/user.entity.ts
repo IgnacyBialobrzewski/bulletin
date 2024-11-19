@@ -1,4 +1,5 @@
-import { Column, Entity, PrimaryGeneratedColumn } from "typeorm"
+import { Listing } from "src/listing/entities/listing.entity"
+import { Column, Entity, OneToMany, PrimaryGeneratedColumn } from "typeorm"
 
 @Entity()
 export class User {
@@ -7,4 +8,7 @@ export class User {
 
     @Column({ length: 32 })
     name: string
+
+    @OneToMany(() => Listing, (listing) => listing.author)
+    listings: Listing[]
 }

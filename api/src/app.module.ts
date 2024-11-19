@@ -4,6 +4,9 @@ import { ConfigModule } from "@nestjs/config"
 import { UserController } from "./user/user.controller"
 import { UserModule } from "./user/user.module"
 import { UserService } from "./user/user.service"
+import { AnnouncementsModule } from './announcements/announcements.module';
+import { AnnouncementModule } from './announcement/announcement.module';
+import { ListingModule } from './listing/listing.module';
 
 @Module({
     imports: [
@@ -20,6 +23,9 @@ import { UserService } from "./user/user.service"
             synchronize: true
         }),
         UserModule,
+        AnnouncementsModule,
+        AnnouncementModule,
+        ListingModule,
     ],
     controllers: [UserController],
     providers: [UserService],
