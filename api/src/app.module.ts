@@ -1,10 +1,8 @@
 import { Module } from "@nestjs/common"
 import { TypeOrmModule } from "@nestjs/typeorm"
 import { ConfigModule } from "@nestjs/config"
-import { UserController } from "./user/user.controller"
 import { UserModule } from "./user/user.module"
-import { UserService } from "./user/user.service"
-import { ListingModule } from './listing/listing.module';
+import { ListingModule } from "./listing/listing.module"
 
 @Module({
     imports: [
@@ -18,13 +16,11 @@ import { ListingModule } from './listing/listing.module';
             password: process.env.DB_PASS,
             entities: [__dirname + "/../**/*.entity.js"],
             logger: "debug",
-            synchronize: true
+            synchronize: true,
         }),
         UserModule,
         ListingModule,
     ],
-    controllers: [UserController],
-    providers: [UserService],
 })
 export class AppModule {
     constructor() {}

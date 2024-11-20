@@ -7,14 +7,14 @@ export class Listing {
     id: number
 
     @CreateDateColumn()
-    date: Date
+    date: string
 
     @ManyToOne(() => User, (user) => user.listings)
     author: User
 
-    @Column({length: 30})
+    @Column({ length: 30 })
     title: string
 
-    @Column({length: 500})
+    @Column({ length: 500 })
     content: string
 }

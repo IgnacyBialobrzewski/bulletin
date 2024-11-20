@@ -1,31 +1,31 @@
 services:
-  api:
-    build: ./api
-    ports:
-      - "3000:3000"
-    environment:
-      - DB_PASS=szkola2024
-      - DB_PORT=5432
-      - DB_NAME=bulletin
-      - DB_USER=postgres
-      - DB_HOST=db
-    depends_on:
-      - db
-    develop:
-      watch:
-        - action: sync+restart
-          path: ./api
-          target: /
-          ignore:
-            - node_modules/
-        - action: rebuild
-          path: package.json
-  db:
-    image: postgres:16
-    restart: always
-    environment:
-      - POSTGRES_PASSWORD=szkola2024
-      - POSTGRES_DB=bulletin
-      - POSTGRES_HOST_AUTH_METHOD=trust
-    ports:
-      - 3001:5432
+    api:
+        build: ./api
+        ports:
+            - "3000:3000"
+        environment:
+            - DB_PASS=szkola2024
+            - DB_PORT=5432
+            - DB_NAME=bulletin
+            - DB_USER=postgres
+            - DB_HOST=db
+        depends_on:
+            - db
+        develop:
+            watch:
+                - action: sync+restart
+                  path: ./api
+                  target: /
+                  ignore:
+                      - node_modules/
+                - action: rebuild
+                  path: package.json
+    db:
+        image: postgres:16
+        restart: always
+        environment:
+            - POSTGRES_PASSWORD=szkola2024
+            - POSTGRES_DB=bulletin
+            - POSTGRES_HOST_AUTH_METHOD=trust
+        ports:
+            - 3001:5432

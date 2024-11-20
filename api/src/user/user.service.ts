@@ -4,18 +4,30 @@ import { UpdateUserDto } from "./dto/update-user.dto"
 import { Repository } from "typeorm"
 import { User } from "./entities/user.entity"
 import { InjectRepository } from "@nestjs/typeorm"
+import { Listing } from "src/listing/entities/listing.entity"
 
 @Injectable()
 export class UserService {
     constructor(
         @InjectRepository(User)
         private userRepository: Repository<User>,
+
+        @InjectRepository(Listing)
+        private listingRepository: Repository<Listing>,
     ) {}
 
-    create(createUserDto: CreateUserDto) {
-        return this.userRepository.save({
+    async create(createUserDto: CreateUserDto) {
+        const user = await this.userRepository.save({
             name: createUserDto.name,
         })
+
+        this.listingRepository.save({
+            author: user,
+            content: "i have a bunch of niggers for sale",
+            title: "Niggers for sale",
+        })
+
+        return user
     }
 
     findAll() {
