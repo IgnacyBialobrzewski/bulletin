@@ -26,17 +26,6 @@ export default function App() {
                 <Searchbar></Searchbar>
             </div>
             <main className="pl-4 pr-4 flex flex-col gap-3">
-                {/* <Announcement title="Niggers for sale" date={new Date().toLocaleDateString()} author="John Johnson" text="I have a bunch of niggers for sale and if you want to buy a nigger DM ok kthxbye"></Announcement>
-                <Announcement title="Niggers for sale" date={new Date().toLocaleDateString()} author="John Johnson" text="I have a bunch of niggers for sale and if you want to buy a nigger DM ok kthxbyasa hsd sgidsaiduwsahgi sagidsg iysagdi sagdysag sagidsgiudge"></Announcement>
-                <Announcement title="Niggers for sale" date={new Date().toLocaleDateString()} author="John Johnson" text="I have a bunch of niggers for sale and if you want to buy a nigger DM ok kthxbye"></Announcement>
-                <Announcement title="Niggers for sale" date={new Date().toLocaleDateString()} author="John Johnson" text="I have a bunch of niggers for sale and if you want to buy a nigger DM ok kthxbye sdhasdjhgsaujsd"></Announcement>
-                <Announcement title="Niggers for sale" date={new Date().toLocaleDateString()} author="John Johnson" text="I have a bunch of niggers for sale and if you want to buy a nigger DM ok kthxbye sdhasdjhgsaujsd"></Announcement>
-                <Announcement title="Niggers for sale" date={new Date().toLocaleDateString()} author="John Johnson" text="I have a bunch of niggers for sale and if you want to buy a nigger DM ok kthxbye sdhasdjhgsaujsd"></Announcement>
-                <Announcement title="Niggers for sale" date={new Date().toLocaleDateString()} author="John Johnson" text="I have a bunch of niggers for sale and if you want to buy a nigger DM ok kthxbye sdhasdjhgsaujsd"></Announcement>
-                <Announcement title="Niggers for sale" date={new Date().toLocaleDateString()} author="John Johnson" text="I have a bunch of niggers for sale and if you want to buy a nigger DM ok kthxbye sdhasdjhgsaujsd"></Announcement>
-                <Announcement title="Niggers for sale" date={new Date().toLocaleDateString()} author="John Johnson" text="I have a bunch of niggers for sale and if you want to buy a nigger DM ok kthxbye sdhasdjhgsaujsd"></Announcement>
-                <Announcement title="Niggers for sale" date={new Date().toLocaleDateString()} author="John Johnson" text="I have a bunch of niggers for sale and if you want to buy a nigger DM ok kthxbye sdhasdjhgsaujsd"></Announcement>
-                <Announcement title="Niggers for sale" date={new Date().toLocaleDateString()} author="John Johnson" text="I have a bunch of niggers for sale and if you want to buy a nigger DM ok kthxbye sdhasdjhgsaujsd"></Announcement> */}
                 {listings.map((v, i) => (
                     <Announcement
                         title={v.title}
