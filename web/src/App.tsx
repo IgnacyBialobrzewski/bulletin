@@ -27,7 +27,7 @@ export default function App() {
                 <Announcement title="Niggers for sale" date={new Date().toLocaleDateString()} author="John Johnson" text="I have a bunch of niggers for sale and if you want to buy a nigger DM ok kthxbye sdhasdjhgsaujsd"></Announcement>
                 <Announcement title="Niggers for sale" date={new Date().toLocaleDateString()} author="John Johnson" text="I have a bunch of niggers for sale and if you want to buy a nigger DM ok kthxbye sdhasdjhgsaujsd"></Announcement>
                 <Announcement title="Niggers for sale" date={new Date().toLocaleDateString()} author="John Johnson" text="I have a bunch of niggers for sale and if you want to buy a nigger DM ok kthxbye sdhasdjhgsaujsd"></Announcement>
-                <Announcement title="Niggers for sale" date={new Date().toLocaleDateString()} author="John Johnson" text="I have a bunch of niggers for sale and if you want to buy a nigger DM ok kthxbye sdhasdjhgsaujsd"></Announcement>
+                <Announcement title="Niggass for sale" date={new Date().toLocaleDateString()} author="John Johnson" text="I have a bunch of niggers for sale and if you want to buy a nigger DM ok kthxbye sdhasdjhgsaujsd"></Announcement>
             </main>
         </main>
     )
