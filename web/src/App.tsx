@@ -4,6 +4,7 @@ import Announcement from "./components/Announcement"
 import Navbar from "./components/Navbar"
 import Searchbar from "./components/Searchbar"
 import { Listing } from "../../api/src/listing/entities/listing.entity"
+import PostAnnouncement from "./components/PostAnn"
 
 export default function App() {
     const [listings, setListings] = useState<Listing[]>([])
@@ -24,6 +25,7 @@ export default function App() {
             </div>
             <div className="pl-4 pr-4 pb-4 flex">
                 <Searchbar></Searchbar>
+                <PostAnnouncement></PostAnnouncement>
             </div>
             <main className="pl-4 pr-4 flex flex-col gap-3">
                 {listings.map((v, i) => (
