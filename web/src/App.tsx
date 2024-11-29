@@ -23,7 +23,7 @@ export default function App() {
                 <h2 className="text-gray-300 font-thin">Listings near you</h2>
                 <hr className="mt-2 select-none"></hr>
             </div>
-            <div className="pl-4 pr-4 pb-4 flex">
+            <div className="pl-4 pr-4 pb-4 gap-1 flex">
                 <Searchbar></Searchbar>
                 <PostAnnouncement></PostAnnouncement>
             </div>
