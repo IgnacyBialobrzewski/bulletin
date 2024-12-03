@@ -1,34 +1,37 @@
-import { useState } from 'react';
+import { useState } from "react"
 
 export default function PostAnnouncement() {
-    const [isFormVisible, setIsFormVisible] = useState(false);
-    const [title, setTitle] = useState('');
-    const [text, setText] = useState('');
+    const [isFormVisible, setIsFormVisible] = useState(false)
+    const [title, setTitle] = useState("")
+    const [text, setText] = useState("")
 
     const toggleFormVisibility = () => {
-        setIsFormVisible(!isFormVisible);
-    };
+        setIsFormVisible(!isFormVisible)
+    }
 
     const handleTitleChange = (b) => {
-        setTitle(b.target.value);
-    };
+        setTitle(b.target.value)
+    }
 
     const handleTextChange = (c) => {
-        setText(c.target.value);
-    };
+        setText(c.target.value)
+    }
 
     const handleSubmit = (a) => {
-        a.preventDefault();
-        console.log('Title:', title);
-        console.log('Text:', text);
-        setTitle('');
-        setText('');
-        setIsFormVisible(false);
-    };
+        a.preventDefault()
+        console.log("Title:", title)
+        console.log("Text:", text)
+        setTitle("")
+        setText("")
+        setIsFormVisible(false)
+    }
 
     return (
         <div>
-            <button onClick={toggleFormVisibility} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-md">
+            <button
+                onClick={toggleFormVisibility}
+                className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-md"
+            >
                 Post Announcement
             </button>
 
@@ -46,7 +49,8 @@ export default function PostAnnouncement() {
                                     type="text"
                                     value={title}
                                     onChange={handleTitleChange}
-                                    className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" />
+                                    className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                />
                             </div>
                             <div className="mb-4">
                                 <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="text">
@@ -79,5 +83,5 @@ export default function PostAnnouncement() {
                 </div>
             )}
         </div>
-    );
+    )
 }
