@@ -1,15 +1,22 @@
-import { useState } from 'react';
+import { useState } from "react"
 
 export default function PostAnnouncement() {
+<<<<<<< HEAD
     const [isFormVisible, setIsFormVisible] = useState(false);
     const [title, setTitle] = useState('');
     const [text, setText] = useState('');
     const [author, setAuthor] = useState('');
+=======
+    const [isFormVisible, setIsFormVisible] = useState(false)
+    const [title, setTitle] = useState("")
+    const [text, setText] = useState("")
+>>>>>>> a5fc5915ede89ebe19861ea90ecf06b50a6e118b
 
     const toggleFormVisibility = () => {
-        setIsFormVisible(!isFormVisible);
-    };
+        setIsFormVisible(!isFormVisible)
+    }
 
+<<<<<<< HEAD
     const handleTitleChange = (a) => {
         setTitle(a.target.value);
     };
@@ -28,10 +35,31 @@ export default function PostAnnouncement() {
         setAuthor('');
         setIsFormVisible(false);
     };
+=======
+    const handleTitleChange = (b) => {
+        setTitle(b.target.value)
+    }
+
+    const handleTextChange = (c) => {
+        setText(c.target.value)
+    }
+
+    const handleSubmit = (a) => {
+        a.preventDefault()
+        console.log("Title:", title)
+        console.log("Text:", text)
+        setTitle("")
+        setText("")
+        setIsFormVisible(false)
+    }
+>>>>>>> a5fc5915ede89ebe19861ea90ecf06b50a6e118b
 
     return (
         <div>
-            <button onClick={toggleFormVisibility} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+            <button
+                onClick={toggleFormVisibility}
+                className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-md"
+            >
                 Post Announcement
             </button>
 
@@ -61,7 +89,12 @@ export default function PostAnnouncement() {
                                     type="text"
                                     value={title}
                                     onChange={handleTitleChange}
+<<<<<<< HEAD
                                     className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"/>
+=======
+                                    className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                />
+>>>>>>> a5fc5915ede89ebe19861ea90ecf06b50a6e118b
                             </div>
                             <div className="mb-4">
                                 <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="text">
@@ -93,5 +126,5 @@ export default function PostAnnouncement() {
                 </div>
             )}
         </div>
-    );
+    )
 }
